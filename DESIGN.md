@@ -43,9 +43,13 @@ Backend servers will also be Dockerized and will be very minimal in functionalit
 
 The library code will have a few simple functions. The parameters supplied in parenthesis are not exaustive.
 auth(certificate): This function will authenticate the client using MTLS.
+
 main or initialize: This function will initialize the load balancer with the configuration hardcoded in a struct.
+
 foward(from, to): This function will accept a connection from a client and forward it to the backend server specified in the to argument. Forward will also increment the count of active connections for the backend server, and will check whether the rate limiting capacity has been exceeded.
+
 getServer(): This function will iterate over the map of active connections and return the server with the least number of active connections. Recall that we choose a map for simplicity of implementation but acknowledge that more efficient data structures could be used.
+
 connect(upstream): Connect will copy data from the upstream backend server specified to the client.
 
 
