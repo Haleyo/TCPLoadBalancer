@@ -30,7 +30,7 @@ It is useful to define here what is out-of-scope for this project:
 
 - The load balancer is implemented in Golang.
 - The net library will be used for listening and forwarding TCP connections.
-- Cryto library will be used for MTLS authentication.
+- The crypto library will be used for mTLS authentication.
 - We will be using Docker to containerize and run our servers. 
 
 ## Proposed Usage and API
