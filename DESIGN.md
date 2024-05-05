@@ -74,5 +74,4 @@ To generate and use certificates for mTLS authentication, we will use the crypto
 
 # Authorization
 
-A simple hardcoded map can be used to identify access.
-
+A simple hardcoded map, mapping client ID's to a list of server IDs, can be used to identify access. 
