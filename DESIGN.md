@@ -41,7 +41,7 @@ Running the load balancer will require a port mapping as a command line argument
 
 Backend servers will also be Dockerized and will be very minimal in functionality, simply listening on a port and responding with a message, including the name or number ID of the server so that users can easily identify which server they are connected to, (e.g., a 200 status code with the message "Hello world from server 4" for a successful connection). The backend servers similarly will be started with a command line argument specifying the port they are listening on, e.g., docker run -p 8081:8081 backendserver. It may be necessary for the user running the application to start (docker run) all of the backend servers before starting the load balancer.
 
-The library code will have a few simple functions. The parameters supplied in parenthesis are not exaustive.
+The library code will have a few simple functions. **The parameters supplied in parenthesis are not exaustive.** There will certainly be more parameters or context passed in than what is listed in parenthesis.
 
 auth(certificate): This function will authenticate the client using mTLS.
 
