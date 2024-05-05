@@ -64,7 +64,7 @@ The library code will have a few simple functions. **The parameters supplied in 
 
 Security will likely be the last thing to be implemented. Initial iterations will allow any unauthenticated requests. Subsequent pull requests will flesh out the security features.
 
-# Rate Limiting
+### Rate Limiting
 
 We will choose a fixed window strategy for rate limiting, as it is the simplest to implement. We will implement a hard rate limiter (as opposed to a soft rate limiter) for simplicity. We will hardcode our capacity variable, as well as hardcode the window size. Connections will be denied with an appropriate status code if the exceed the limit for the window.
 
