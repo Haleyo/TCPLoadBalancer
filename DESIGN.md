@@ -70,7 +70,7 @@ We will choose a fixed window strategy for rate limiting, as it is the simplest 
 
 # Authentication
 
-To generate and use certificates for MTLS authentication, we will use the crypto library in Golang. For simplicity, we may choose to hardcode the certificate. 
+To generate and use certificates for mTLS authentication, we will use the crypto library in Golang. For simplicity, we may choose to hardcode the certificate. 
 
 # Authorization
 
