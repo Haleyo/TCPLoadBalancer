@@ -1,4 +1,4 @@
-### TCP Load Balancer Design Considerationg
+# TCP Load Balancer Design Considerationg
 
 Please note that this TCP Load Balancer is a simple implementation for evaluative/educational purposes and is not intended to be used in production. 
 
@@ -10,7 +10,7 @@ Please note that this TCP Load Balancer is a simple implementation for evaluativ
 - The load balancer client should be able to handle concurrent requests.
 - MTLS authentication is a requirement
 
-# Out-of-scope
+### Out-of-scope
 
 It is useful to define here what is out-of-scope for this project:
 
@@ -22,7 +22,7 @@ It is useful to define here what is out-of-scope for this project:
 - Timeout settings are not accepted, and the load balancer will not close idle connections automatically
 - Only the most basic rate limiting strategy is considered, no other rate limiting startegies are implemented. Rate limiting configuration (capacity and window size) are hardcoded and not configurable. 
 
-# Stretch Goals
+### Stretch Goals
 
 - Health checks: No design decisions are made concerning health checks at this time, but a very simple health check strategy will be implemented if time allows (e.g., ping)
 
@@ -68,10 +68,10 @@ Security will likely be the last thing to be implemented. Initial iterations wil
 
 We will choose a fixed window strategy for rate limiting, as it is the simplest to implement. We will implement a hard rate limiter (as opposed to a soft rate limiter) for simplicity. We will hardcode our capacity variable, as well as hardcode the window size. Connections will be denied with an appropriate status code if the exceed the limit for the window.
 
-# Authentication
+### Authentication
 
 To generate and use certificates for mTLS authentication, we will use the crypto library in Golang. For simplicity, we may choose to hardcode the certificate. 
 
-# Authorization
+### Authorization
 
 A simple hardcoded map, mapping client ID's to a list of server IDs, can be used to identify access. 
